@@ -16,7 +16,7 @@ export class PackageService {
 
   public getPackages(): Observable<Package[]> {
     return this.http.get<Package[]>(
-      `${baseUrl}?_embed=category&_embed=brand&_embed=product`
+      `${baseUrl}?_expand=category&_expand=brand&_expand=product`
     );
   }
 
