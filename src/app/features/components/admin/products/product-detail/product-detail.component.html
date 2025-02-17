@@ -1,0 +1,27 @@
+<h3 mat-dialog-title>Product Details</h3>
+<mat-dialog-content>
+  <div class="product-details">
+    <p>
+      <strong>Product Name: {{ product.name }}</strong>
+    </p>
+    <p><strong>Brand:</strong> {{ product.brand }}</p>
+    <p><strong>Units:</strong> {{ product.unit }}</p>
+
+    <div class="product-attributes">
+      <strong>Available Variants:</strong>
+      <ul>
+        @for( variant of variants(); track variant){
+        <li>
+          <strong>
+            {{ variant.brand }} {{ variant.name }} {{ variant.color }}
+            {{ variant.size }}
+          </strong>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</mat-dialog-content>
+<div mat-dialog-actions>
+  <button mat-button type="button" (click)="dialogRef.close()">Close</button>
+</div>

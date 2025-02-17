@@ -1,0 +1,14 @@
+<mat-sidenav-container class="sidenav-container m-2">
+  <mat-sidenav mode="side" opened class="">
+    <ul>
+      @for(sideNav of sideNavMenus; track sideNav.label){
+      <li mat-list-item [routerLink]="sideNav.url" routerLinkActive="active">
+        {{ sideNav.label }}
+      </li>
+      }
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content class="nav-content p-2">
+    <router-outlet />
+  </mat-sidenav-content>
+</mat-sidenav-container>

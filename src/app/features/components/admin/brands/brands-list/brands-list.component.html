@@ -1,0 +1,7 @@
+<app-list-header [title]="'Brand'" (openDialog)="openDialog()" />
+<app-table
+  [dataSource]="brands()"
+  [displayedColumns]="displayedColumns"
+  (onEdit)="onEdit($event)"
+  (onDelete)="onDelete($event)"
+/>

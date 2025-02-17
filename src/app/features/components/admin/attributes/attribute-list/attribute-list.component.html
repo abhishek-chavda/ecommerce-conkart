@@ -1,0 +1,7 @@
+<app-list-header [title]="'Attribute'" (openDialog)="openDialog()" />
+<app-table
+  [dataSource]="attributes()"
+  [displayedColumns]="displayedColumns"
+  (onEdit)="onEdit($event)"
+  (onDelete)="onDelete($event)"
+/>

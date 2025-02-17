@@ -1,0 +1,13 @@
+# netlify.toml
+
+[build]
+  # Define the build command
+  command = "ng build"
+  
+    publish = "dist/ecommerce-client/browser"  
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true

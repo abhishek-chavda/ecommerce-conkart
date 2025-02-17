@@ -1,0 +1,21 @@
+@if(isLoading()){
+<div class="overlay">
+  <mat-progress-spinner class="spinner" mode="indeterminate" diameter="100">
+  </mat-progress-spinner>
+</div>
+} @if(isAdmin()){
+<mat-toolbar color="primary" class="d-flex">
+  <span> {{ isAdmin() | titlecase }} Panel</span>
+  <div class="ms-auto">
+    <button mat-raised-button class="me-3" routerLink="/">
+      <mat-icon class="m-0">home</mat-icon>
+    </button>
+    @if(isAdmin() === 'ADMIN'){
+    <button mat-raised-button routerLink="/customer">
+      Switched to Customer
+    </button>
+    }
+  </div>
+</mat-toolbar>
+}
+<router-outlet />

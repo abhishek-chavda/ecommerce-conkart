@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.mdc-button {
+  border-radius: 5px !important;
+}
+
+.sidenav-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #f4f4f4;
+}
+
+mat-sidenav {
+  background-color: #343a40 !important;
+  color: #fff;
+  width: 250px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+mat-sidenav {
+  ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #fff;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #495057;
+      }
+
+      &.active {
+        background: #242424;
+      }
+    }
+  }
+}
+
+.mat-sidenav-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+  overflow-y: auto;
+}

@@ -1,0 +1,97 @@
+<h3 mat-dialog-title>{{ isEditMode() ? "Update" : "Add" }} Package</h3>
+<div class="d-flex"></div>
+<form [formGroup]="packageForm" (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+    <div class="d-flex justify-content-between gap-3">
+      <mat-form-field appearance="outline">
+        <mat-label> Select Category </mat-label>
+        <mat-select
+          formControlName="categoryId"
+          (selectionChange)="getProductsByFilters()"
+        >
+          @for(category of categories(); track category){
+          <mat-option [value]="category.id">{{ category.name }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label> Select Brand </mat-label>
+        <mat-select
+          formControlName="brandId"
+          (selectionChange)="getProductsByFilters()"
+        >
+          @for(brand of brands(); track brand){
+          <mat-option [value]="brand.id">{{ brand.name }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    @if(products().length){
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label> Select Product </mat-label>
+      <mat-select
+        formControlName="productId"
+        (selectionChange)="getProductById(productRef.value)"
+        #productRef
+      >
+        @for(product of products(); track product){
+        <mat-option [value]="product.id">
+          {{ product.name }}
+        </mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    }
+    <!--  -->
+    @if(selectedProduct()){
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label> Unit </mat-label>
+      <mat-select
+        formControlName="unit"
+        (selectionChange)="onUnitChange($event)"
+      >
+        @for(unit of [].constructor(selectedProduct()?.['unit']); track $index){
+        <mat-option [value]="$index + 1">{{ $index + 1 }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    }
+    <ng-container formArrayName="attributes">
+      @for(product of attributes.controls;let i = $index; let last = $last;track
+      product){
+      <ng-container [formGroupName]="i">
+        <div class="d-flex justify-content-between">
+          <mat-form-field appearance="outline">
+            <mat-label> Color </mat-label>
+            <mat-select formControlName="color">
+              @for(color of selectedProduct()?.attributes?.['color']; track
+              color){
+              <mat-option [value]="color">{{ color }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label> Size </mat-label>
+            <mat-select formControlName="size">
+              @for(size of selectedProduct()?.attributes?.['size']; track size){
+              <mat-option [value]="size">{{ size }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+        @if($last && attributes.hasError('duplicate')){
+        <mat-error> Duplicate color & size combination found! </mat-error>
+        }
+      </ng-container>
+      }
+    </ng-container>
+  </mat-dialog-content>
+
+  <div mat-dialog-actions>
+    <button mat-button type="button" (click)="dialogRef.close()">Cancel</button>
+    <button mat-button type="submit" [disabled]="packageForm.invalid">
+      {{ isEditMode() ? "Update" : "Add" }}
+    </button>
+  </div>
+</form>

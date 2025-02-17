@@ -1,0 +1,7 @@
+<app-list-header [title]="'Package'" (openDialog)="openDialog()" />
+<app-table
+  [dataSource]="packages()"
+  [displayedColumns]="displayedColumns"
+  (onEdit)="onEdit($event)"
+  (onDelete)="onDelete($event)"
+/>

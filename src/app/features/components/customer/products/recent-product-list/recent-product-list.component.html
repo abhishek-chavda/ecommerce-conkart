@@ -1,0 +1,14 @@
+<div class="d-flex align-items-center justify-content-between px-2">
+  <h2>Recent Product List</h2>
+  <mat-form-field appearance="outline">
+    <mat-label>Search Products</mat-label>
+    <input matInput [formControl]="productSearchCTRL" placeholder="Search..." />
+  </mat-form-field>
+</div>
+
+<app-table
+  [dataSource]="recentProducts()"
+  [displayedColumns]="displayedColumns"
+  [actions]="{ isView: true, isEdit: false, isDelete: false }"
+  (onView)="onView($event)"
+/>

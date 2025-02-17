@@ -1,0 +1,7 @@
+<app-list-header [title]="'Unit'" (openDialog)="openDialog()" />
+<app-table
+  [dataSource]="units()"
+  [displayedColumns]="displayedColumns"
+  (onEdit)="onEdit($event)"
+  (onDelete)="onDelete($event)"
+/>

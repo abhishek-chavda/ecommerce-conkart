@@ -1,0 +1,225 @@
+{
+  "categories": [
+    {
+      "id": "62632204691724",
+      "name": "Electronics"
+    },
+    {
+      "id": "2",
+      "name": "Clothing"
+    }
+  ],
+  "brands": [
+    {
+      "id": "671556487135594",
+      "categoryId": "62632204691724",
+      "name": "Apple"
+    },
+    {
+      "id": "1195231474204002",
+      "categoryId": "62632204691724",
+      "name": "Samsung"
+    },
+    {
+      "id": "41753595887256",
+      "categoryId": "62632204691724",
+      "name": "Iqoo"
+    },
+    {
+      "id": "353174660887454",
+      "categoryId": "62632204691724",
+      "name": "Google Pixel"
+    }
+  ],
+  "packages": [
+    {
+      "id": "172238824381536",
+      "categoryId": "62632204691724",
+      "category": "Electronics",
+      "brandId": "671556487135594",
+      "brand": "Apple",
+      "productId": "62632243591724",
+      "unit": 2,
+      "attributes": [
+        {
+          "color": "Blue",
+          "size": "128GB"
+        },
+        {
+          "color": "Blue",
+          "size": "64GB"
+        }
+      ]
+    },
+    {
+      "id": "836838276700569",
+      "categoryId": "62632204691724",
+      "category": "",
+      "brandId": "41753595887256",
+      "brand": "",
+      "productId": "619345016300736",
+      "unit": 1,
+      "attributes": [
+        {
+          "color": "Blue",
+          "size": "256GB"
+        }
+      ]
+    },
+    {
+      "id": "1101286189455855",
+      "categoryId": "62632204691724",
+      "category": "",
+      "brandId": "353174660887454",
+      "brand": "",
+      "productId": "194854989149744",
+      "unit": 1,
+      "attributes": [
+        {
+          "color": "Blue",
+          "size": "64GB"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "62632243591724",
+      "name": "iPhone 15",
+      "description": "APPLE IPHONE ",
+      "categoryId": "62632204691724",
+      "category": "",
+      "brandId": "671556487135594",
+      "brand": "Apple",
+      "unitId": "2",
+      "unit": 2,
+      "attributes": {
+        "color": [
+          "Red",
+          "Green",
+          "Blue"
+        ],
+        "size": [
+          "64GB",
+          "128GB"
+        ]
+      },
+      "createdAt": "2025-02-17T09:58:29.257Z"
+    },
+    {
+      "id": "5",
+      "name": "iPhone 11",
+      "description": "APPLE IPHONE ",
+      "categoryId": "62632204691724",
+      "category": "",
+      "brandId": "671556487135594",
+      "brand": "Apple",
+      "unitId": "2",
+      "unit": 2,
+      "attributes": {
+        "color": [
+          "Green"
+        ],
+        "size": [
+          "128GB"
+        ]
+      },
+      "createdAt": "2025-02-15T19:16:43.808Z"
+    },
+    {
+      "id": "62631904691724",
+      "name": "Samsung Galaxy S22",
+      "description": "SAMSUNG PHONE",
+      "categoryId": "62632204691724",
+      "category": "Electronics",
+      "brandId": "1195231474204002",
+      "brand": "Samsung",
+      "unitId": "2",
+      "unit": 2,
+      "attributes": {
+        "color": [
+          "Green",
+          "Blue"
+        ],
+        "size": [
+          "64GB",
+          "128GB",
+          "256GB",
+          "1TB"
+        ]
+      },
+      "createdAt": "2025-02-16T19:16:30.808Z"
+    },
+    {
+      "id": "619345016300736",
+      "name": "Iqoo neo 7",
+      "description": "Best gaming Phone",
+      "categoryId": "62632204691724",
+      "category": "Electronics",
+      "brandId": "41753595887256",
+      "brand": "Iqoo",
+      "unitId": "2",
+      "unit": "1",
+      "attributes": {
+        "color": [
+          "Blue"
+        ],
+        "size": [
+          "256GB"
+        ]
+      },
+      "createdAt": "2025-02-16T19:16:20.808Z"
+    },
+    {
+      "id": "194854989149744",
+      "name": "Pixel Pro 9",
+      "description": "",
+      "categoryId": "62632204691724",
+      "category": "Electronics",
+      "brandId": "353174660887454",
+      "brand": "Google Pixel",
+      "unitId": "2",
+      "unit": 2,
+      "attributes": {
+        "color": [
+          "Blue"
+        ],
+        "size": [
+          "64GB"
+        ]
+      },
+      "createdAt": "2025-02-17T07:18:08.754Z"
+    }
+  ],
+  "attributes": [
+    {
+      "id": "1",
+      "name": "Color",
+      "values": [
+        "Red",
+        "Green",
+        "Blue"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Size",
+      "values": [
+        "64GB",
+        "128GB",
+        "256GB",
+        "1TB"
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "1",
+      "name": "KG"
+    },
+    {
+      "id": "2",
+      "name": "Piece"
+    }
+  ]
+}

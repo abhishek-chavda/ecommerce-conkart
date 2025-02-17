@@ -1,0 +1,9 @@
+<app-list-header [title]="'Product'" (openDialog)="openDialog()" />
+<app-table
+  [dataSource]="products()"
+  [displayedColumns]="displayedColumns"
+  (onView)="onView($event)"
+  (onEdit)="onEdit($event)"
+  (onDelete)="onDelete($event)"
+  [actions]="{ isView: true, isEdit: true, isDelete: true }"
+/>

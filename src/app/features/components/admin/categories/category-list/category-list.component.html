@@ -1,0 +1,7 @@
+<app-list-header [title]="'Category'" (openDialog)="openDialog()" />
+<app-table
+  [dataSource]="categories()"
+  [displayedColumns]="displayedColumns"
+  (onEdit)="onEdit($event)"
+  (onDelete)="onDelete($event)"
+/>
